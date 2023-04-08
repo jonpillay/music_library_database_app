@@ -1,0 +1,18 @@
+<html>
+  <head></head>
+  <body>
+    <h1><%= @artist.name %></h1>
+    <p>
+      <h2>Genre: <%= @artist.genre %></h2>
+    <p>
+      <h2>Artist Albums</h2>
+      <% @artist_albums.each do |album| %>
+      <h2>Title = <a href="/albums/<%= album.id %>"><%= album.title %></a></h2>
+      <h2>Release Year = <%= album.release_year %>
+      <% end %>
+    <p>
+      <h4><a href="/artists">Back to Artist Listings!</a><h4>
+      <h4><a href="/albums">Back to Album Listings!</a><h4>
+    </p>
+  </body>
+</html>

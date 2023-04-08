@@ -1,0 +1,21 @@
+<html>
+  <head></head>
+  <body>
+    <div style="padding-right:200px;">
+    <h1>Albums</h1>
+    </div>
+    <ul style="list-style:none;">
+    <% @albums.each do |album| %>
+      <li>
+        <h1>Title: <a href="/albums/<%= album.id %>"><%= album.title %></h1></a>
+        <p>
+        <h2>Release Year: <%= album.release_year %></h2>
+        <p>
+        <h2>Artist: <%= @artists.find(album.artist_id).name %></h2>
+        </p>
+      </li>
+      <br>
+    <% end %>
+    </ul>
+  </body>
+</html>
